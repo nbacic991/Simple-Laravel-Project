@@ -8,6 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://servebolt.com/wp-content/uploads/2017/07/laravel_logo-circle-tp-xs.png" type="image/x-icon">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
