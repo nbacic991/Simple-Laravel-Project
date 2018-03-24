@@ -7,11 +7,11 @@
         {!!$post->body!!}
     </div>
     <hr>
-    <small>Written on {{ $post->created_at }}</small>
+    <small>Written on {{ $post->created_at }} by {{ $post->user->name }}</small>
     <hr>
     <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
 
-    {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'mr-left'])!!}
+    {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'float-right'])!!}
         {{ Form::hidden('_method', 'DELETE')}}
         {{ Form::submit('Delete', ['class' => 'btn btn-danger'])}}
     {!!Form::close()!!}
